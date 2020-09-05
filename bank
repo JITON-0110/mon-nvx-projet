@@ -1,0 +1,66 @@
+package bank.mustafa;
+
+public class Compte 
+{
+
+	private String prenom;
+	private String nom;
+	private int numero;
+	private double solde;
+	
+	public Compte(String prenom, String nom, int numero, double solde) 
+	{
+		this.prenom = prenom;
+		this.nom = nom;
+		this.numero = numero;
+		this.solde = solde;
+	}
+	
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public double getSolde() {
+		return solde;
+	}
+
+	public void setSolde(double solde) {
+		this.solde = solde;
+	}
+	
+	public void solder(double soldeRetire)
+	{
+		this.solde -= soldeRetire;
+		System.out.println("Le client " + prenom + " " + nom + " vient de retirer " + soldeRetire + " sur son compte.");
+		System.out.println("Le nouveau solde : " + solde);
+	}
+	
+	public void crediter(double soldeVerse)
+	{
+		this.solde += soldeVerse;
+		System.out.println("Le client " + prenom + " " + nom + " vient de verser " + soldeVerse + " sur son compte.");
+		System.out.println("Le nouveau solde : " + solde);
+	}
+	
+	
+}
